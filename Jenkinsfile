@@ -2,9 +2,9 @@ pipeline {
     agent none
     stages {
         stage('Build') {
-            agent { 
-                docker ‘node:10.14.0-alpine’ 
-            } 
+            agent {
+                docker { image 'maven:3.8.1-adoptopenjdk-11' }
+            }
             steps {
                 script {
                 sh 'cd ..'
