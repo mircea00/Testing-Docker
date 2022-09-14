@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     stages {
         stage('Build') {
             agent {
@@ -11,7 +11,6 @@ pipeline {
         }
     }
     post {
-        agent any
         success {
             echo '-----------------Deleting workspace--------------'
                 cleanWs(cleanWhenNotBuilt: false,
