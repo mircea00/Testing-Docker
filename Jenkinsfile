@@ -6,13 +6,7 @@ pipeline {
                 docker { image 'maven:3.8.1-adoptopenjdk-11' }
             }
             steps {
-                script {
-                sh 'cd ..'
-                sh 'ls'
-                sh 'ls -l /var/jenkins_home/workspace'
-                sh 'ls -l $WORKSPACE'
-                sh 'ls -l /usr/bin'
-                }
+                sh 'mvn --version'
             }
         }
     }
