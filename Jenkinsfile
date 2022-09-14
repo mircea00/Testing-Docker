@@ -1,9 +1,10 @@
 pipeline {
-    agent {
-     docker : 'node-10.14.0-alpine'
-}
+    agent none
     stages {
         stage('Build') {
+            agent { 
+       docker ‘node:10.14.0-alpine’ 
+    } 
             steps {
                 script {
                 sh 'cd ..'
