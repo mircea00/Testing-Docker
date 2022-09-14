@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             agent { 
-       docker ‘node:10.14.0-alpine’ 
-    } 
+                docker ‘node:10.14.0-alpine’ 
+            } 
             steps {
                 script {
                 sh 'cd ..'
