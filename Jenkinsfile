@@ -12,6 +12,7 @@ pipeline {
     }
     post {
         success {
+            agent any
             echo '-----------------Deleting workspace--------------'
                 cleanWs(cleanWhenNotBuilt: false,
                     deleteDirs: true,
