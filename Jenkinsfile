@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+     docker : 'node-10.14.0-alpine'
+}
     stages {
         stage('Build') {
             steps {
